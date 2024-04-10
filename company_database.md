@@ -1,5 +1,3 @@
-Guide for Connecting MySQL database to VSCode: https://www.geeksforgeeks.org/how-to-connect-to-mysql-server-using-vs-code-and-fix-errors/
-
 This figure represents the database I created in MySQL. I referenced the following create statements to make each schema below:
 
 Employee: CREATE TABLE EMPLOYEE (Fname VARCHAR(15) NOT NULL, Minit CHAR, Lname VARCHAR(15) NOT NULL, Ssn CHAR(9) NOT NULL, Bdate DATE, Address VARCHAR(30), Sex CHAR, Salary DECIMAL(10, 2), Super_ssn CHAR(9), Dno INT NOT NULL, PRIMARY KEY (Ssn), FOREIGN KEY (Super_ssn) REFERENCES EMPLOYEE(Ssn), FOREIGN KEY (Dno) REFERENCES DEPARTMENT(Dnumber));
@@ -15,3 +13,4 @@ Works On: CREATE TABLE WORKS_ON (Essn CHAR(9) NOT NULL, Pno INT NOT NULL, Hours 
 Dependent: CREATE TABLE DEPENDENT (Essn CHAR(9) NOT NULL, Dependent_name VARCHAR(15) NOT NULL, Sex CHAR, Bdate DATE, Relationship VARCHAR(8), PRIMARY KEY (Essn, Dependent_name), FOREIGN KEY (Essn) REFERENCES EMPLOYEE(Ssn));
 
 ![image](https://github.com/peter-alonzo/database_operations_project/assets/123613195/bc6f7085-118a-403a-ac6b-43bb3da4ee50)
+Guide for Connecting MySQL database to VSCode: https://www.geeksforgeeks.org/how-to-connect-to-mysql-server-using-vs-code-and-fix-errors/
